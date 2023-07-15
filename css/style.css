@@ -283,6 +283,7 @@ nav{
     position: relative;
     background-color: #181445;
     height: 31.25rem;
+    bottom: 0 auto;
 }
 .redes-footer-container{
     position: relative;
@@ -335,11 +336,11 @@ nav{
 }
 /*GMAIL-DERECHOS*/
 .derechos{
+    display: flex;
+    justify-content: center;
+    align-items: end;
     font-family: "jona-font";
-    position: relative;
     color: #FFFFFF;
-    left: 53.125rem;
-    top: 9rem;
 }
 .contacto-f{
     font-family: "jona-font";
@@ -566,19 +567,35 @@ nav{
 }
 .grids{
     display: grid;
-    grid-template-columns: 0.1fr 0.1fr;
-    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 6.25rem;
+    grid-template-columns: 1fr;
+    /* position: relative; */
+    height: 102vh;
+    /* top: 18.75rem; */
 }
 /*OFERTA-1*/
 .oferta-1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+    /* margin-left: 29.6875rem; */
     column-gap: .3125rem;
-    position: relative;
+    /* position: relative; */
     background-color: #D9D9D9;
     width: 60rem;
     height: 20rem;
     /* top: 20rem;
     left: 29rem; */
     border-radius: 3%;
+    /* margin-left: 29.6875rem;
+    column-gap: .3125rem;
+    position: relative;
+    background-color: #D9D9D9;
+    width: 60rem;
+    height: 20rem;
+    top: 20rem;
+    left: 29rem;
+    border-radius: 3%; */
 }
 /*LOGO-JHONSCLEAN*/
 .oferta-1 figure img{
@@ -654,13 +671,24 @@ nav{
 }
 /*OFERTA-2*/
 .oferta-2{
-    position: relative;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    /* margin-left: 29.6875rem; */
+    /* position: relative; */
     background-color: #D9D9D9;
     width: 60rem;
     height: 20rem;
     /* top: 30rem;
-    left: 29rem; */
+    left: 29rem;  */
     border-radius: 3%;
+    /* margin-left: 29.6875rem;
+    position: relative;
+    background-color: #D9D9D9;
+    width: 60rem;
+    height: 20rem;
+    top: 30rem;
+    left: 29rem; 
+    border-radius: 3%; */
 }
 /*LOGO-JHONSCLEAN*/
 .oferta-2 figure img{
@@ -736,13 +764,22 @@ nav{
 }
 /*OFERTA-3*/
 .oferta-3{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    /* margin-left: 29.6875rem;
+    margin-bottom: 40.625rem; */
+    /* position: relative; */
+    background-color: #D9D9D9;
+    width: 60rem;
+    height: 20rem;
+    border-radius: 3%;
+    /* margin-left: 29.6875rem;
+    margin-bottom: 40.625rem;
     position: relative;
     background-color: #D9D9D9;
     width: 60rem;
     height: 20rem;
-    /* top: 40rem;
-    left: 29rem; */
-    border-radius: 3%;
+    border-radius: 3%; */
 }
 /*LOGO-JHONSCLEAN*/
 .oferta-3 figure img{
@@ -840,7 +877,8 @@ nav{
 }
 /*MAIN*/
 .envianos-tu-cv{
-    position: relative;
+    display: flex;
+    justify-content: center;
     height: 3rem;
     width: 13rem;
     background-color: #9F1B09;
@@ -849,15 +887,56 @@ nav{
     color: #FFFFFF;
     opacity: 68%;
 }
+.envianos-tu-cv a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.envianos-tu-cv a:hover{
+    color: cadetblue;
+}
 /*INFORMACIÓN*/
 .nuestro-equipo{
+    display: flex;
+    justify-content: center;
     font-size: 1.5rem;
+    position: relative;
+    top: 12.5rem;
+}
+.parte-de-ne{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly 6.25rem;
+}
+.p-unete {
+    width: 50rem;
+    position: relative;
+    top: 18.75rem;
+}
+.circulos-tcn{
+    position: relative;
+    top: 31.25rem;
+    margin-bottom: 50rem;
 }
 .tcn-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.125rem 3.125rem;
     height: 3rem;
     width: 13rem;
     border-radius: 5%;
+    position: relative;
+    top: 25rem;
     background-color: #221EE0;
+}
+.tcn-box a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.tcn-2{
+    position: relative;
+    top: 12.5rem;
 }
 .tcn-box h4{
     color: #FFFFFF;
@@ -865,14 +944,18 @@ nav{
 }
 /*CIRCULO-FOTO*/
 .circulo-tcn{
+    position: absolute;
     height: 12.5rem;
     width: 12.5rem;
     background-color: #6F3838;
     border-radius: 100%;
 }
 .circulo-tcn-foto{
+    position: relative;
     height: 12.5rem;
     width: 12.5rem;
+    left: 2.625rem;
+    top: .625rem;
     background-image: url(../assets/img/manocuaderno.jpg);
     background-size: cover;
     background-position: center;
@@ -899,16 +982,38 @@ nav{
     background: linear-gradient(to right, hsla(179, 69%, 48%, 0.603), #1A2980), url(../assets/img/contacto3.jpg);
 }
 /*MAIN*/
+.flex-contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex-contacto div h4{
+    position: relative;
+    top: 30rem;
+}
+.textos-comunicacion{
+    position: relative;
+    top: 26.25rem;
+    text-align: center;
+}
 .contacto-comercial{
     height: 3rem;
     width: 14rem;
     background-color: #D9D9D9;
     border-radius: 10%;
     text-align: center;
+    position: relative;
+    top: 12.5rem;
 }
 /*FORMULARIO*/
 /*DATOS PERSONALES*/
 .datos-personales{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 31.25rem;
     background-color: #D9D9D9;
     width: 50rem;
     height: 4rem;
@@ -918,6 +1023,11 @@ nav{
 }
 /*DATOS DE LA EMPRESA*/
 .datos-de-la-empresa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 33.125rem;
     background-color: #D9D9D9;
     width: 50rem;
     height: 4rem;
@@ -930,6 +1040,11 @@ nav{
 }
 /*NOMBRE DE LA COMPANIA*/
 .nombre-dlc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 35rem;
     background-color: #D9D9D9;
     width: 50rem;
     height: 4rem;
@@ -951,6 +1066,8 @@ nav{
     text-align: center;
     border: .0625rem solid rgb(164, 171, 172);
     border-radius: 5%;
+    position: relative;
+    top: 36.875rem;
 }
 .cuen-inp{
     width: 35rem;
@@ -963,11 +1080,142 @@ nav{
     height: 2rem;
     background-color: #FF6B00;
     border-radius: 10%;
+    position: relative;
+    top: 40.625rem;
+}
+/*CV*/
+.cv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9D9D9;
+    width: 50rem;
+    height: 4rem;
+    text-align: center;
+    border: .0625rem solid rgb(164, 171, 172);
+    border-radius: 5%;
+    position: relative;
+    top: 38.75rem;
 }
 /*MAPA-SUCURSALES*/
+.nuestras-sucursales{
+    position: relative;
+    top: 50rem;
+}
 .mapa{
     width: 60rem;
     height: 40rem;
     background-color: #D9D9D9;
     text-align: center;
+    margin-bottom: 68.75rem;
+    position: relative;
+    top: 50rem;
+}
+@media (max-width:1024px){
+    nav{
+        width: 100%;
+        height: 50rem;
+        background: #1488CC;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav1024.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, hsla(237, 61%, 43%, 0.705), hsla(202, 82%, 44%, 0.699)), url(../assets/img/imagennav1024.jpg); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-size: contain;
+        background-attachment: fixed;
+        position: relative;
+    }
+    html{
+        overflow-x: hidden;
+    }
+    .logo-nav{
+        position: relative;
+        right: 12.5rem;
+        bottom: 3.75rem;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        gap: .625rem;
+        justify-content: center;
+        margin-right: 75rem;
+    }
+    .somos{
+        left: 6.75rem;
+    }
+    .buscando-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 40.625rem;
+        left: 10rem;
+        position: relative;
+    }
+    .trabaja-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        width: 40.625rem;
+        left: 5.625rem;
+        position: relative;
+    }
+    .posiciona{
+        width: 25rem;
+        left: 6.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .posiciona h3{
+        width: 34.375rem;
+    }
+    .servicios-footer-container{
+        display: flex;
+        justify-content: center;
+    }
+    .servicios-footer li a{
+        position: unset;
+    }
+    .servicios-footer-container ul{
+        list-style: none;
+    }
+    .derechos{
+        position: unset;
+    }
+    .contacto-f {
+        position: unset;
+    }
+    .gmail{
+        position: unset;
+    }
+    .redes-footer-container{
+        display: unset;
+        position: unset;
+        justify-content: unset;
+        right: unset;
+        bottom: unset;
+    }
+    .f-logo{
+        position: unset;
+    }
+    .container-contacto-f{
+        margin-bottom: 15px;
+    }
+    .f-logo{
+        display: flex;
+        flex-direction: row;
+    }
+    .prueba-logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: calc(100% - 16px);
+    }
+    .cualquiera{
+        display: contents;
+    }
+    .icono{
+        margin: 0px 5px;
+    }
 }
